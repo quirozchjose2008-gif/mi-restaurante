@@ -3,6 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <title>Mar & Sabor</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <style>
     body { margin:0; font-family: 'Segoe UI', sans-serif; background:#f8f9fa; color:#333; }
     header { background:url('banner.jpg') center/cover no-repeat; color:white; text-align:center; padding:80px 20px; }
@@ -11,7 +12,9 @@
     nav a { color:white; margin:0 20px; text-decoration:none; font-weight:bold; }
     section { padding:40px 20px; max-width:900px; margin:auto; }
     h2 { color:#0077b6; margin-bottom:20px; }
-    .menu-item { background:white; padding:15px; margin:10px 0; border-radius:8px; box-shadow:0 2px 5px rgba(0,0,0,0.1); }
+    .menu-item { background:white; padding:15px; margin:20px 0; border-radius:8px; box-shadow:0 2px 5px rgba(0,0,0,0.1); text-align:center; }
+    .menu-item img { border-radius:10px; box-shadow:0 2px 5px rgba(0,0,0,0.2); transition:transform 0.3s ease; width:100%; max-width:300px; margin-top:10px; }
+    .menu-item img:hover { transform:scale(1.05); }
     footer { background:#023e8a; color:white; text-align:center; padding:20px; margin-top:40px; }
     button { background:#0077b6; color:white; border:none; padding:10px 20px; border-radius:5px; cursor:pointer; }
     button:hover { background:#023e8a; }
@@ -35,10 +38,22 @@
   <!-- Menú -->
   <section id="menu">
     <h2>Menú</h2>
-    <div class="menu-item">🍤 Ceviche tropical</div>
-    <div class="menu-item">🐟 Tiradito de maracuyá</div>
-    <div class="menu-item">🦑 Arroz con mariscos</div>
-    <div class="menu-item">🦀 Jalea crocante</div>
+    <div class="menu-item">
+      🍤 Ceviche tropical <br>
+      <img src="ceviche.jpg" alt="Ceviche tropical">
+    </div>
+    <div class="menu-item">
+      🐟 Tiradito de maracuyá <br>
+      <img src="tiradito.jpg" alt="Tiradito de maracuyá">
+    </div>
+    <div class="menu-item">
+      🦑 Arroz con mariscos <br>
+      <img src="arroz.jpg" alt="Arroz con mariscos">
+    </div>
+    <div class="menu-item">
+      🦀 Jalea crocante <br>
+      <img src="jalea.jpg" alt="Jalea crocante">
+    </div>
   </section>
 
   <!-- Promociones -->
@@ -52,11 +67,11 @@
   <section id="reservas">
     <h2>Reservas</h2>
     <form>
-      <label>Nombre: <input type="text"></label><br><br>
-      <label>Teléfono: <input type="text"></label><br><br>
+      <label>Nombre: <input type="text" placeholder="Ej. Juan Pérez"></label><br><br>
+      <label>Teléfono: <input type="text" placeholder="+51 987 654 321"></label><br><br>
       <label>Fecha: <input type="date"></label><br><br>
       <label>Hora: <input type="time"></label><br><br>
-      <label>Personas: <input type="number"></label><br><br>
+      <label>Personas: <input type="number" placeholder="Ej. 4"></label><br><br>
       <button type="submit">Reservar</button>
     </form>
   </section>
@@ -65,11 +80,15 @@
   <section id="contacto">
     <h2>Contacto</h2>
     <p>📍 Av. Marina 456, Lima</p>
-    <p>📞 WhatsApp: +51 987 654 321</p>
+    <p>📞 WhatsApp: <a href="https://wa.me/51987654321" target="_blank">+51 987 654 321</a></p>
   </section>
 
   <!-- Footer -->
   <footer>
     <p>© 2026 Mar & Sabor</p>
+    <p><a href="#menu" style="color:white;">Menú</a> | 
+       <a href="#reservas" style="color:white;">Reservas</a> | 
+       <a href="#contacto" style="color:white;">Contacto</a></p>
   </footer>
 </body>
+</html>
