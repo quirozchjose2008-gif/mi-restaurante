@@ -20,9 +20,7 @@
       color: white;
       text-shadow: 2px 2px 4px #000;
     }
-    header h1 {
-      font-size: 3em;
-    }
+    header h1 { font-size: 3em; }
     nav {
       background-color: #004d40;
       padding: 10px;
@@ -34,16 +32,14 @@
       margin: 0 15px;
       font-weight: bold;
     }
-    nav a:hover {
-      text-decoration: underline;
-    }
-    .menu {
+    nav a:hover { text-decoration: underline; }
+    .menu, .promociones {
       display: flex;
       flex-wrap: wrap;
       justify-content: center;
       padding: 20px;
     }
-    .plato {
+    .plato, .promo {
       background: white;
       border-radius: 8px;
       box-shadow: 0 2px 5px rgba(0,0,0,0.2);
@@ -52,17 +48,39 @@
       text-align: center;
       transition: transform 0.3s;
     }
-    .plato:hover {
-      transform: scale(1.05);
-    }
-    .plato img {
+    .plato:hover, .promo:hover { transform: scale(1.05); }
+    .plato img, .promo img {
       width: 100%;
       border-radius: 8px 8px 0 0;
     }
-    .plato h3 {
-      margin: 10px 0;
-      color: #004d40;
+    .plato h3, .promo h3 { margin: 10px 0; color: #004d40; }
+    .reservas, .contacto {
+      background-color: #e0f2f1;
+      padding: 30px;
+      text-align: center;
     }
+    .reservas h2, .contacto h2 { color: #004d40; }
+    .reservas form, .contacto div {
+      max-width: 400px;
+      margin: auto;
+      text-align: left;
+    }
+    .reservas input, .reservas textarea {
+      width: 100%;
+      padding: 10px;
+      margin: 8px 0;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+    }
+    .reservas button {
+      background-color: #004d40;
+      color: white;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+    .reservas button:hover { background-color: #00695c; }
     footer {
       background-color: #004d40;
       color: white;
@@ -78,32 +96,87 @@
   </header>
 
   <nav>
-    <a href="#ceviche">Ceviche</a>
-    <a href="#tiradito">Tiradito</a>
-    <a href="#arroz">Arroz con Mariscos</a>
-    <a href="#jalea">Jalea Crocante</a>
+    <a href="#menu">Menú</a>
+    <a href="#promociones">Promociones</a>
+    <a href="#reservas">Reservas</a>
+    <a href="#contacto">Contacto</a>
   </nav>
 
-  <section class="menu">
-    <div class="plato" id="ceviche">
+  <!-- Sección Menú -->
+  <section class="menu" id="menu">
+    <div class="plato">
       <img src="img/ceviche.jpg" alt="Ceviche Tropical">
       <h3>Ceviche Tropical</h3>
       <p>Fresco, cítrico y lleno de sabor.</p>
+      <p><strong>Precio:</strong> S/ 35</p>
     </div>
-    <div class="plato" id="tiradito">
+    <div class="plato">
       <img src="img/tiradito.jpg" alt="Tiradito de Maracuyá">
       <h3>Tiradito de Maracuyá</h3>
       <p>Un clásico con un toque exótico.</p>
+      <p><strong>Precio:</strong> S/ 32</p>
     </div>
-    <div class="plato" id="arroz">
+    <div class="plato">
       <img src="img/arroz.jpg" alt="Arroz con Mariscos">
       <h3>Arroz con Mariscos</h3>
       <p>Sabores marinos en cada bocado.</p>
+      <p><strong>Precio:</strong> S/ 40</p>
     </div>
-    <div class="plato" id="jalea">
+    <div class="plato">
       <img src="img/jalea.jpg" alt="Jalea Crocante">
       <h3>Jalea Crocante</h3>
       <p>Crujiente y deliciosa para compartir.</p>
+      <p><strong>Precio:</strong> S/ 38</p>
+    </div>
+  </section>
+
+  <!-- Sección Promociones -->
+  <section class="promociones" id="promociones">
+    <div class="promo">
+      <img src="img/promo1.jpg" alt="Happy Hour">
+      <h3>Happy Hour</h3>
+      <p>2x1 en piscos de 6 a 8 PM.</p>
+      <p><strong>Precio:</strong> S/ 25</p>
+    </div>
+    <div class="promo">
+      <img src="img/promo2.jpg" alt="Combo Familiar">
+      <h3>Combo Familiar</h3>
+      <p>Ceviche + Arroz + Bebidas a precio especial.</p>
+      <p><strong>Precio:</strong> S/ 90</p>
+    </div>
+  </section>
+
+  <!-- Sección Reservas -->
+  <section class="reservas" id="reservas">
+    <h2>Reservas</h2>
+    <form>
+      <label for="nombre">Nombre:</label>
+      <input type="text" id="nombre" name="nombre" placeholder="Tu nombre">
+
+      <label for="personas">Número de personas:</label>
+      <input type="number" id="personas" name="personas" placeholder="Ej: 4">
+
+      <label for="fecha">Fecha:</label>
+      <input type="date" id="fecha" name="fecha">
+
+      <label for="hora">Hora:</label>
+      <input type="time" id="hora" name="hora">
+
+      <label for="mensaje">Mensaje:</label>
+      <textarea id="mensaje" name="mensaje" placeholder="Detalles adicionales"></textarea>
+
+      <button type="submit">Reservar</button>
+    </form>
+  </section>
+
+  <!-- Sección Contacto -->
+  <section class="contacto" id="contacto">
+    <h2>Contacto</h2>
+    <div>
+      <p><strong>Dirección:</strong> Av. Marina 456, Lima</p>
+      <p><strong>WhatsApp:</strong> +51 987 654 321</p>
+      <p><strong>Email:</strong> contacto@marsabor.com</p>
+      <p><strong>Horario:</strong> Lunes a Domingo, 12 PM - 11 PM</p>
     </div>
   </section>
 
