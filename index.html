@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Mar & Sabor</title>
+  <style>
+    body { margin:0; font-family: 'Segoe UI', sans-serif; background:#f8f9fa; color:#333; }
+    header { background:url('banner.jpg') center/cover no-repeat; color:white; text-align:center; padding:80px 20px; }
+    header h1 { font-size:3em; margin:0; }
+    nav { background:#0077b6; text-align:center; padding:15px; }
+    nav a { color:white; margin:0 20px; text-decoration:none; font-weight:bold; }
+    section { padding:40px 20px; max-width:900px; margin:auto; }
+    h2 { color:#0077b6; margin-bottom:20px; }
+    .menu-item { background:white; padding:15px; margin:10px 0; border-radius:8px; box-shadow:0 2px 5px rgba(0,0,0,0.1); }
+    footer { background:#023e8a; color:white; text-align:center; padding:20px; margin-top:40px; }
+    button { background:#0077b6; color:white; border:none; padding:10px 20px; border-radius:5px; cursor:pointer; }
+    button:hover { background:#023e8a; }
+  </style>
+</head>
+<body>
+  <!-- Encabezado -->
+  <header>
+    <h1>Mar & Sabor</h1>
+    <p>Delicias marinas con estilo moderno</p>
+  </header>
+
+  <!-- Navegación -->
+  <nav>
+    <a href="#menu">Menú</a>
+    <a href="#promos">Promociones</a>
+    <a href="#reservas">Reservas</a>
+    <a href="#contacto">Contacto</a>
+  </nav>
+
+  <!-- Menú -->
+  <section id="menu">
+    <h2>Menú</h2>
+    <div class="menu-item">🍤 Ceviche tropical</div>
+    <div class="menu-item">🐟 Tiradito de maracuyá</div>
+    <div class="menu-item">🦑 Arroz con mariscos</div>
+    <div class="menu-item">🦀 Jalea crocante</div>
+  </section>
+
+  <!-- Promociones -->
+  <section id="promos">
+    <h2>Promociones</h2>
+    <p>🎉 Happy Hour: 2x1 en piscos de 6 a 8 PM</p>
+    <p>👨‍👩‍👧‍👦 Combo familiar: ceviche + arroz + bebidas</p>
+  </section>
+
+  <!-- Reservas -->
+  <section id="reservas">
+    <h2>Reservas</h2>
+    <form>
+      <label>Nombre: <input type="text"></label><br><br>
+      <label>Teléfono: <input type="text"></label><br><br>
+      <label>Fecha: <input type="date"></label><br><br>
+      <label>Hora: <input type="time"></label><br><br>
+      <label>Personas: <input type="number"></label><br><br>
+      <button type="submit">Reservar</button>
+    </form>
+  </section>
+
+  <!-- Contacto -->
+  <section id="contacto">
+    <h2>Contacto</h2>
+    <p>📍 Av. Marina 456, Lima</p>
+    <p>📞 WhatsApp: +51 987 654 321</p>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>© 2026 Mar & Sabor</p>
+  </footer>
+</body>
